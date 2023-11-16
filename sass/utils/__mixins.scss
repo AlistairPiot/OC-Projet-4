@@ -1,0 +1,16 @@
+@mixin title-h2 {
+    font-size: 24px;
+    color: #000000;
+}
+@mixin btn {
+    background: linear-gradient(
+        0deg,
+        rgba(147, 86, 220, 1) 0%,
+        rgba(255, 121, 218, 1) 100%
+    );
+    border-radius: 25px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 13px 18px;
+}

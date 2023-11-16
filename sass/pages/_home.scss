@@ -1,38 +1,4 @@
-@import "./node_modules/normalize.css/normalize.css";
-
-:root {
-    --main-bg-color: #ffffff;
-    --secondary-bg-color: #eaeaea;
-    --third-bg-color: #f6f6f6;
-    --main-text-color: #101010;
-    --secondary-text-color: #353535;
-    --primary-icon-color: #9356dc;
-}
-
-@mixin title-h2 {
-    font-size: 24px;
-    color: #000000;
-}
-@mixin btn {
-    background: linear-gradient(
-        0deg,
-        rgba(147, 86, 220, 1) 0%,
-        rgba(255, 121, 218, 1) 100%
-    );
-    border-radius: 25px;
-    border: none;
-    color: white;
-    font-size: 16px;
-    padding: 13px 18px;
-}
-
-body {
-    padding: 0;
-    margin: 0;
-    scroll-behavior: smooth;
-}
-
-.main-container {
+.home .main-container {
     margin: 0;
     padding: 0;
     font-family: roboto;
