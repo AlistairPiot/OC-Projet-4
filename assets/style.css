@@ -267,13 +267,22 @@ body {
   height: 275px;
 }
 .menu-1 .main-container .restaurant {
+  position: relative;
+  top: -55px;
+  margin-bottom: -55px;
+  padding: 10px;
+  border-radius: 45px;
   background-color: var(--third-bg-color);
+}
+.menu-1 .main-container .restaurant__menu {
+  margin: 50px 0;
 }
 .menu-1 .main-container .restaurant__menu .line-bottom {
   width: 40px;
   border: 2px solid #99e2d0;
 }
 .menu-1 .main-container .restaurant__menu .card {
+  margin: 10px 0;
   border-radius: 15px;
   padding: 5px;
   background-color: var(--main-bg-color);
