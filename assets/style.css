@@ -265,6 +265,7 @@ body {
 }
 .menu-1 .main-container .header__secondary .images {
   height: 275px;
+  width: 100%;
 }
 .menu-1 .main-container .restaurant {
   position: relative;
@@ -274,8 +275,30 @@ body {
   border-radius: 45px;
   background-color: var(--third-bg-color);
 }
+.menu-1 .main-container .restaurant__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28px;
+}
+.menu-1 .main-container .restaurant__header .title {
+  font-family: Shrikhand;
+  font-size: 28px;
+  font-weight: 400;
+  font-style: italic;
+}
+.menu-1 .main-container .restaurant__header .card-icon .svg-inline--fa {
+  margin-right: 15px;
+}
 .menu-1 .main-container .restaurant__menu {
-  margin: 50px 0;
+  margin: 0px;
+}
+.menu-1 .main-container .restaurant__menu .title {
+  margin-top: 45px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 .menu-1 .main-container .restaurant__menu .line-bottom {
   width: 40px;
@@ -283,22 +306,28 @@ body {
 }
 .menu-1 .main-container .restaurant__menu .card {
   margin: 10px 0;
+  padding: 15px;
   border-radius: 15px;
-  padding: 5px;
   background-color: var(--main-bg-color);
   color: #000000;
 }
 .menu-1 .main-container .restaurant__menu .card__title {
+  margin-bottom: 5px;
   font-size: 18px;
   font-weight: 500;
 }
 .menu-1 .main-container .restaurant__menu .card__info {
   font-size: 15px;
-  font-weight: 500;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.menu-1 .main-container .restaurant__menu .card__info .description {
+  margin-top: 0px;
+  font-weight: 300;
 }
 .menu-1 .main-container .restaurant__menu .card__info .price {
+  margin-top: 0px;
   font-weight: 700;
 }
 .menu-1 .main-container .restaurant__button {
