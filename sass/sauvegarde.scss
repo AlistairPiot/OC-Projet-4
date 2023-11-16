@@ -1,0 +1,259 @@
+@import "./node_modules/normalize.css/normalize.css";
+
+:root {
+    --main-bg-color: #ffffff;
+    --secondary-bg-color: #eaeaea;
+    --third-bg-color: #f6f6f6;
+    --main-text-color: #101010;
+    --secondary-text-color: #353535;
+    --primary-icon-color: #9356dc;
+}
+
+@mixin title-h2 {
+    font-size: 24px;
+    color: #000000;
+}
+@mixin btn {
+    background: linear-gradient(
+        0deg,
+        rgba(147, 86, 220, 1) 0%,
+        rgba(255, 121, 218, 1) 100%
+    );
+    border-radius: 25px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 13px 18px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+.main-container {
+    margin: 0;
+    padding: 0;
+    font-family: roboto;
+    .header {
+        &__principal {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px 0 15px 0;
+            background-color: var(--main-bg-color);
+            filter: drop-shadow(0px 3px 2px rgba(128, 128, 128, 0.3));
+            .logo {
+                width: 200px;
+            }
+        }
+        &__secondary {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--secondary-bg-color);
+            .text {
+                font-weight: 500;
+                color: var(--secondary-text-color);
+            }
+            .svg-inline--fa {
+                color: var(--secondary-text-color);
+                margin-right: 20px;
+            }
+        }
+    }
+    /****** Section Explorer ***********/
+    .explorer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: var(--third-bg-color);
+        padding-bottom: 50px;
+        &__title {
+            @include title-h2();
+            width: 275px;
+            margin-bottom: 15px;
+        }
+        &__text-info {
+            width: 85%;
+            font-size: 18px;
+            font-weight: 300;
+            color: var(--secondary-text-color);
+            margin-bottom: 30px;
+            margin-top: 0px;
+        }
+        &__button {
+            @include btn();
+        }
+    }
+    /****** Section Fonctionnement ***********/
+    .fonctionnement {
+        margin: 0 20px;
+        padding-top: 20px;
+        .title {
+            @include title-h2();
+        }
+        .card-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .card {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                width: 90%;
+                padding: 10px;
+                margin-bottom: 20px;
+                background-color: var(--third-bg-color);
+                filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.2));
+                border-radius: 20px;
+                &__numero {
+                    position: absolute;
+                    left: -12px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: var(--primary-icon-color);
+                    color: var(--main-bg-color);
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                }
+                .svg-inline--fa {
+                    color: #7e7e7e;
+                    margin-left: 25px;
+                    margin-right: 20px;
+                }
+                &__card-title {
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: #000000;
+                }
+                &:last-child {
+                    .svg-inline--fa {
+                        color: var(--primary-icon-color);
+                    }
+                }
+            }
+        }
+    }
+    /****** Section Restaurant ***********/
+    .restaurant {
+        margin: 0;
+        padding-top: 20px;
+        padding-bottom: 45px;
+        background-color: var(--secondary-bg-color);
+        .title {
+            @include title-h2();
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        .card-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 20px;
+            a {
+                width: 100%;
+                text-decoration: none;
+                list-style: none;
+            }
+            .card {
+                height: 280px;
+                margin-bottom: 20px;
+                border-radius: 15px;
+                width: 100%;
+                margin-bottom: 20px;
+                &__nouveau {
+                    position: absolute;
+                    right: 35px;
+                    margin-top: 15px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 80px;
+                    padding: 5px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #008766;
+                    background-color: #99e2d0;
+                    border-radius: 2px;
+                }
+                &__images {
+                    width: 100%;
+                    height: 175px;
+                    object-fit: cover;
+                    border-radius: 15px 15px 0 0;
+                }
+                &__content {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 15px;
+                    background-color: var(--third-bg-color);
+                    border-radius: 0 0 15px 15px;
+                    .card-text {
+                        color: #000000;
+                        .title {
+                            font-size: 18px;
+                            padding: 0px;
+                            margin: 15px 0 0 0;
+                        }
+                        .subtitle {
+                            font-size: 17px;
+                            font-weight: 300;
+                            margin-top: 5px;
+                        }
+                    }
+                    .card-icon {
+                        .svg-inline--fa {
+                            width: 22px;
+                            height: 21px;
+                            color: var(--main-text-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /****** Section Footer ***********/
+    .footer {
+        background-color: #353535;
+        color: var(--main-bg-color);
+        padding: 20px;
+        &__title {
+            font-size: 18px;
+            font-family: Shrikhand;
+            font-weight: 400;
+            margin: 5px 0 10px 0;
+        }
+        &__global {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            .fa-utensils {
+                width: 13px;
+                height: 13px;
+            }
+            .fa-handshake-angle {
+                width: 13px;
+                height: 13px;
+            }
+            &__text {
+                font-weight: 500;
+                margin: 5px 0px;
+            }
+            &__text:nth-child(2) {
+                margin-left: 11px;
+            }
+            &__text:nth-child(1) {
+                font-weight: 400;
+            }
+        }
+    }
+}
