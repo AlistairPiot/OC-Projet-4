@@ -10,6 +10,8 @@
             filter: drop-shadow(0px 3px 2px rgba(128, 128, 128, 0.3));
             .icon {
                 color: var(--secondary-text-color);
+                position: absolute;
+                left: 25px;
                 .svg-inline--fa {
                     height: 30px;
                 }
@@ -22,6 +24,7 @@
             .images {
                 height: 275px;
                 width: 100%;
+                object-fit: cover;
             }
         }
     }
@@ -52,23 +55,29 @@
         &__menu {
             margin: 0px;
             .title {
-                margin-top: 45px;
+                margin-top: 40px;
                 margin-bottom: 5px;
                 font-size: 16px;
                 font-weight: 300;
                 text-transform: uppercase;
             }
+            .title-special {
+                margin-top: 15px;
+            }
+
             .line-bottom {
                 width: 40px;
                 border: 2px solid #99e2d0;
             }
             .card {
-                margin: 10px 0;
+                margin: 15px 0;
                 padding: 15px;
                 border-radius: 15px;
                 background-color: var(--main-bg-color);
+                filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
                 color: #000000;
                 &__title {
+                    margin-top: 0px;
                     margin-bottom: 5px;
                     font-size: 18px;
                     font-weight: 500;
@@ -80,16 +89,19 @@
                     align-items: center;
                     .description {
                         margin-top: 0px;
+                        margin-bottom: 0px;
                         font-weight: 300;
                     }
                     .price {
                         margin-top: 0px;
+                        margin-bottom: 0px;
                         font-weight: 700;
                     }
                 }
             }
         }
         &__button {
+            padding: 25px 0 25px 0;
             display: flex;
             justify-content: center;
             align-items: center;
