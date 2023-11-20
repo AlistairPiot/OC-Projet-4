@@ -19,6 +19,7 @@
             justify-content: center;
             align-items: center;
             background-color: var(--secondary-bg-color);
+            padding: 15px 0;
             .svg-inline--fa {
                 color: var(--secondary-text-color);
                 margin-right: 15px;
@@ -114,6 +115,19 @@
                 }
             }
         }
+        /* Medium devices (tablets, more/equal than 768px) */
+        @media (min-width: 1024px) {
+            margin: 10px 10% 20px;
+            .title {
+                margin-left: 18px;
+            }
+            .card-list {
+                flex-direction: row;
+                .card {
+                    margin: 30px;
+                }
+            }
+        }
     }
     /****** Section Restaurant ***********/
     .restaurant {
@@ -194,6 +208,21 @@
                 }
             }
         }
+        @media (min-width: 1024px) {
+            padding: 10px 10% 20px;
+            .card-list {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                .a-card {
+                    display: flex;
+                    width: 45%;
+                    .card {
+                    }
+                }
+            }
+        }
     }
     /****** Section Footer ***********/
     .footer {
@@ -227,6 +256,20 @@
             }
             &__text:nth-child(1) {
                 font-weight: 400;
+            }
+        }
+        @media (min-width: 1024px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            padding: 40px 20% 20px 0;
+            &__title {
+                position: absolute;
+                right: 50px;
+                margin-top: -5px;
+            }
+            &__global {
+                margin: 0 10px;
             }
         }
     }

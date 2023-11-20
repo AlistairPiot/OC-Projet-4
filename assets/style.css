@@ -39,6 +39,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--secondary-bg-color);
+  padding: 15px 0;
 }
 .home .main-container .header__secondary .svg-inline--fa {
   color: var(--secondary-text-color);
@@ -90,6 +91,7 @@ body {
 .home .main-container .fonctionnement {
   margin: 0 20px;
   padding-top: 20px;
+  /* Medium devices (tablets, more/equal than 768px) */
 }
 .home .main-container .fonctionnement .title {
   font-size: 24px;
@@ -136,6 +138,20 @@ body {
 }
 .home .main-container .fonctionnement .card-list .card:last-child .svg-inline--fa {
   color: var(--primary-icon-color);
+}
+@media (min-width: 1024px) {
+  .home .main-container .fonctionnement {
+    margin: 10px 10% 20px;
+  }
+  .home .main-container .fonctionnement .title {
+    margin-left: 18px;
+  }
+  .home .main-container .fonctionnement .card-list {
+    flex-direction: row;
+  }
+  .home .main-container .fonctionnement .card-list .card {
+    margin: 30px;
+  }
 }
 .home .main-container .restaurant {
   margin: 0;
@@ -215,6 +231,21 @@ body {
   height: 21px;
   color: var(--main-text-color);
 }
+@media (min-width: 1024px) {
+  .home .main-container .restaurant {
+    padding: 10px 10% 20px;
+  }
+  .home .main-container .restaurant .card-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .home .main-container .restaurant .card-list .a-card {
+    display: flex;
+    width: 45%;
+  }
+}
 .home .main-container .footer {
   background-color: #353535;
   color: var(--main-bg-color);
@@ -248,6 +279,22 @@ body {
 }
 .home .main-container .footer__global__text:nth-child(1) {
   font-weight: 400;
+}
+@media (min-width: 1024px) {
+  .home .main-container .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 40px 20% 20px 0;
+  }
+  .home .main-container .footer__title {
+    position: absolute;
+    right: 50px;
+    margin-top: -5px;
+  }
+  .home .main-container .footer__global {
+    margin: 0 10px;
+  }
 }
 
 .menu-1 .main-container {
