@@ -63,6 +63,12 @@
         &__button {
             @include btn();
         }
+        /* device desktop (more/equal than 1024px) */
+        @media (min-width: 1024px) {
+            &__title {
+                width: auto;
+            }
+        }
     }
     /****** Section Fonctionnement ***********/
     .fonctionnement {
@@ -115,7 +121,7 @@
                 }
             }
         }
-        /* Medium devices (tablets, more/equal than 768px) */
+        /* device desktop (more/equal than 1024px) */
         @media (min-width: 1024px) {
             margin: 10px 10% 20px;
             .title {
@@ -152,6 +158,7 @@
                 list-style: none;
             }
             .card {
+                position: relative;
                 height: 280px;
                 margin-bottom: 20px;
                 border-radius: 15px;
@@ -159,7 +166,7 @@
                 margin-bottom: 20px;
                 &__nouveau {
                     position: absolute;
-                    right: 35px;
+                    right: 15px;
                     margin-top: 15px;
                     display: flex;
                     justify-content: center;
@@ -208,6 +215,7 @@
                 }
             }
         }
+        /* device desktop (more/equal than 1024px) */
         @media (min-width: 1024px) {
             padding: 10px 10% 20px;
             .card-list {
@@ -258,6 +266,7 @@
                 font-weight: 400;
             }
         }
+        /* device desktop (more/equal than 1024px) */
         @media (min-width: 1024px) {
             display: flex;
             flex-direction: row;
@@ -269,7 +278,7 @@
                 margin-top: -5px;
             }
             &__global {
-                margin: 0 10px;
+                margin: 0 15px;
             }
         }
     }
