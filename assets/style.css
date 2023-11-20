@@ -30,9 +30,15 @@ body {
   padding: 25px 0 15px 0;
   background-color: var(--main-bg-color);
   filter: drop-shadow(0px 3px 2px rgba(128, 128, 128, 0.3));
+  /* device desktop (more/equal than 1024px) */
 }
 .home .main-container .header__principal .logo {
   width: 200px;
+}
+@media (min-width: 1024px) {
+  .home .main-container .header__principal {
+    padding-bottom: 25px;
+  }
 }
 .home .main-container .header__secondary {
   display: flex;
@@ -241,7 +247,7 @@ body {
 }
 @media (min-width: 1024px) {
   .home .main-container .restaurant {
-    padding: 10px 10% 20px;
+    padding: 10px 10% 0px;
   }
   .home .main-container .restaurant .card-list {
     display: flex;
@@ -328,6 +334,11 @@ body {
 }
 .menu-1 .main-container .header__principal .logo {
   width: 200px;
+}
+@media (min-width: 1024px) {
+  .menu-1 .main-container .header__principal {
+    padding-bottom: 25px;
+  }
 }
 .menu-1 .main-container .header__secondary .images {
   height: 275px;
@@ -418,10 +429,29 @@ body {
   font-size: 16px;
   padding: 13px 18px;
 }
+@media (min-width: 1024px) {
+  .menu-1 .main-container .restaurant {
+    margin: 0px 15%;
+    margin-bottom: -55px;
+    border-radius: 45px 45px 0 0;
+  }
+  .menu-1 .main-container .restaurant__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-1 .main-container .restaurant__header .title {
+    margin: 20px 25px;
+  }
+  .menu-1 .main-container .restaurant__menu {
+    margin: 0px 20%;
+  }
+}
 .menu-1 .main-container .footer {
   background-color: #353535;
   color: var(--main-bg-color);
   padding: 20px;
+  /* device desktop (more/equal than 1024px) */
 }
 .menu-1 .main-container .footer__title {
   font-size: 18px;
@@ -451,6 +481,22 @@ body {
 }
 .menu-1 .main-container .footer__global__text:nth-child(1) {
   font-weight: 400;
+}
+@media (min-width: 1024px) {
+  .menu-1 .main-container .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 40px 20% 20px 0;
+  }
+  .menu-1 .main-container .footer__title {
+    position: absolute;
+    right: 50px;
+    margin-top: -5px;
+  }
+  .menu-1 .main-container .footer__global {
+    margin: 0 15px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

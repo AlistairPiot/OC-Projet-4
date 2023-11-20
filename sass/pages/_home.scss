@@ -13,6 +13,10 @@
             .logo {
                 width: 200px;
             }
+            /* device desktop (more/equal than 1024px) */
+            @media (min-width: 1024px) {
+                padding-bottom: 25px;
+            }
         }
         &__secondary {
             display: flex;
@@ -217,7 +221,7 @@
         }
         /* device desktop (more/equal than 1024px) */
         @media (min-width: 1024px) {
-            padding: 10px 10% 20px;
+            padding: 10px 10% 0px;
             .card-list {
                 display: flex;
                 flex-direction: row;
@@ -226,8 +230,6 @@
                 .a-card {
                     display: flex;
                     width: 45%;
-                    .card {
-                    }
                 }
             }
         }
