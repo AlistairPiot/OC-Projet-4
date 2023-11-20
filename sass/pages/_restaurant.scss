@@ -19,15 +19,29 @@
             .logo {
                 width: 200px;
             }
-            @media (min-width: 1024px) {
-                padding-bottom: 25px;
-            }
         }
         &__secondary {
             .images {
                 height: 275px;
                 width: 100%;
                 object-fit: cover;
+            }
+        }
+        /* Galaxy Fold (less/equal than 280px) */
+        @media (max-width: 280px) {
+            &__principal {
+                .icon {
+                    left: 7px;
+                    .svg-inline--fa {
+                        height: 25px;
+                    }
+                }
+            }
+        }
+        /* device desktop (more/equal than 1024px) */
+        @media (min-width: 1024px) {
+            &__principal {
+                padding-bottom: 25px;
             }
         }
     }
@@ -112,6 +126,7 @@
                 @include btn;
             }
         }
+        /* device desktop (more/equal than 1024px) */
         @media (min-width: 1024px) {
             margin: 0px 15%;
             margin-bottom: -55px;
