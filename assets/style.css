@@ -15,6 +15,46 @@ body {
   --primary-icon-color: #9356dc;
 }
 
+@keyframes colorChange {
+  0% {
+    background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  }
+  20% {
+    background: linear-gradient(0deg, rgba(147, 86, 220, 0.95) 0%, rgba(255, 121, 218, 0.95) 100%);
+  }
+  40% {
+    background: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 0%, rgba(255, 121, 218, 0.9) 100%);
+  }
+  60% {
+    background: linear-gradient(0deg, rgba(147, 86, 220, 0.85) 0%, rgba(255, 121, 218, 0.85) 100%);
+  }
+  80% {
+    background: linear-gradient(0deg, rgba(147, 86, 220, 0.8) 0%, rgba(255, 121, 218, 0.8) 100%);
+  }
+  100% {
+    background: linear-gradient(0deg, rgba(147, 86, 220, 0.75) 0%, rgba(255, 121, 218, 0.75) 100%);
+  }
+}
+@keyframes revertColorChange {
+  0% {
+    background: linear-gradient(0deg, rgba(147, 86, 220, 0.75) 0%, rgba(255, 121, 218, 0.75) 100%);
+  }
+  20% {
+    background: linear-gradient(0deg, rgba(147, 86, 220, 0.8) 0%, rgba(255, 121, 218, 0.8) 100%);
+  }
+  40% {
+    background: linear-gradient(0deg, rgba(147, 86, 220, 0.85) 0%, rgba(255, 121, 218, 0.85) 100%);
+  }
+  60% {
+    background: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 0%, rgba(255, 121, 218, 0.9) 100%);
+  }
+  80% {
+    background: linear-gradient(0deg, rgba(147, 86, 220, 0.95) 0%, rgba(255, 121, 218, 0.95) 100%);
+  }
+  100% {
+    background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  }
+}
 .home .main-container {
   margin: 0;
   padding: 0;
@@ -96,10 +136,13 @@ body {
   color: white;
   font-size: 16px;
   padding: 13px 18px;
-  transition: filter 0.3s ease;
 }
 .home .main-container .explorer__a-button .button:hover {
-  filter: brightness(1.25);
+  animation: colorChange 0.2s ease-in-out;
+  animation-fill-mode: forwards;
+}
+.home .main-container .explorer__a-button .button:not(:hover) {
+  animation: revertColorChange 0.2s ease-in-out;
 }
 @media (min-width: 1024px) {
   .home .main-container .explorer__title {
@@ -449,10 +492,13 @@ body {
   color: white;
   font-size: 16px;
   padding: 13px 18px;
-  transition: filter 0.2s ease;
 }
 .menu-1 .main-container .restaurant__button .btn:hover {
-  filter: brightness(1.25);
+  animation: colorChange 0.2s ease-in-out;
+  animation-fill-mode: forwards;
+}
+.menu-1 .main-container .restaurant__button .btn:not(:hover) {
+  animation: revertColorChange 0.2s ease-in-out;
 }
 @media (min-width: 1024px) {
   .menu-1 .main-container .restaurant {
