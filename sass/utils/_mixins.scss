@@ -3,7 +3,7 @@
     color: #000000;
 }
 @mixin btn {
-    z-index: 1;
+    cursor: pointer;
     background: linear-gradient(
         0deg,
         rgba(147, 86, 220, 1) 0%,

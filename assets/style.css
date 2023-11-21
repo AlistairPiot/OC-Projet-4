@@ -89,23 +89,17 @@ body {
   margin-top: 0px;
 }
 .home .main-container .explorer__a-button .button {
-  z-index: 1;
+  cursor: pointer;
   background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   border-radius: 25px;
   border: none;
   color: white;
   font-size: 16px;
   padding: 13px 18px;
+  transition: filter 0.3s ease;
 }
-.home .main-container .explorer__a-button .button:hover::after {
-  opacity: 1;
-}
-.home .main-container .explorer__a-button .button::after {
-  content: "";
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 250ms;
-  background: linear-gradient(0deg, rgba(147, 86, 220, 0.75) 0%, rgba(255, 121, 218, 0.75) 100%);
+.home .main-container .explorer__a-button .button:hover {
+  filter: brightness(1.25);
 }
 @media (min-width: 1024px) {
   .home .main-container .explorer__title {
@@ -448,13 +442,17 @@ body {
   align-items: center;
 }
 .menu-1 .main-container .restaurant__button .btn {
-  z-index: 1;
+  cursor: pointer;
   background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   border-radius: 25px;
   border: none;
   color: white;
   font-size: 16px;
   padding: 13px 18px;
+  transition: filter 0.2s ease;
+}
+.menu-1 .main-container .restaurant__button .btn:hover {
+  filter: brightness(1.25);
 }
 @media (min-width: 1024px) {
   .menu-1 .main-container .restaurant {
