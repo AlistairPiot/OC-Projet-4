@@ -1,4 +1,5 @@
 @import "./node_modules/normalize.css/normalize.css";
+html,
 body {
   padding: 0;
   margin: 0;
@@ -87,13 +88,24 @@ body {
   margin-bottom: 30px;
   margin-top: 0px;
 }
-.home .main-container .explorer__button {
+.home .main-container .explorer__a-button .button {
+  z-index: 1;
   background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   border-radius: 25px;
   border: none;
   color: white;
   font-size: 16px;
   padding: 13px 18px;
+}
+.home .main-container .explorer__a-button .button:hover::after {
+  opacity: 1;
+}
+.home .main-container .explorer__a-button .button::after {
+  content: "";
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 250ms;
+  background: linear-gradient(0deg, rgba(147, 86, 220, 0.75) 0%, rgba(255, 121, 218, 0.75) 100%);
 }
 @media (min-width: 1024px) {
   .home .main-container .explorer__title {
@@ -102,7 +114,7 @@ body {
 }
 .home .main-container .fonctionnement {
   margin: 0 20px;
-  padding-top: 20px;
+  padding: 20px 0px 40px;
   /* device desktop (more/equal than 1024px) */
 }
 .home .main-container .fonctionnement .title {
@@ -154,6 +166,7 @@ body {
 @media (min-width: 1024px) {
   .home .main-container .fonctionnement {
     margin: 10px 10% 20px;
+    padding-bottom: 0px;
   }
   .home .main-container .fonctionnement .title {
     margin-left: 18px;
@@ -435,6 +448,7 @@ body {
   align-items: center;
 }
 .menu-1 .main-container .restaurant__button .btn {
+  z-index: 1;
   background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   border-radius: 25px;
   border: none;
