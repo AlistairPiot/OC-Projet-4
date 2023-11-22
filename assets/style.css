@@ -55,6 +55,52 @@ body {
     background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   }
 }
+@keyframes fadeIn {
+  0% {
+    color: linear-gradient(0deg, rgba(147, 86, 220, 0.75) 0%, rgba(255, 121, 218, 0.75) 100%);
+    opacity: 0;
+  }
+  20% {
+    color: linear-gradient(0deg, rgba(147, 86, 220, 0.75) 0%, rgba(255, 121, 218, 0.75) 100%);
+    opacity: 0.2;
+  }
+  40% {
+    color: linear-gradient(0deg, rgba(147, 86, 220, 0.75) 0%, rgba(255, 121, 218, 0.75) 100%);
+    opacity: 0.4;
+  }
+  60% {
+    color: linear-gradient(0deg, rgba(147, 86, 220, 0.75) 0%, rgba(255, 121, 218, 0.75) 100%);
+    opacity: 0.6;
+  }
+  80% {
+    color: linear-gradient(0deg, rgba(147, 86, 220, 0.75) 0%, rgba(255, 121, 218, 0.75) 100%);
+    opacity: 0.8;
+  }
+  100% {
+    color: linear-gradient(0deg, rgba(147, 86, 220, 0.75) 0%, rgba(255, 121, 218, 0.75) 100%);
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  75% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .home .main-container {
   margin: 0;
   padding: 0;
@@ -290,10 +336,36 @@ body {
   font-weight: 300;
   margin-top: 5px;
 }
-.home .main-container .restaurant .card-list .card__content .card-icon .svg-inline--fa {
+.home .main-container .restaurant .card-list .card__content .card-icon {
+  position: relative;
+}
+.home .main-container .restaurant .card-list .card__content .card-icon .heart-wrapper {
+  z-index: 2;
+}
+.home .main-container .restaurant .card-list .card__content .card-icon .heart-wrapper .svg-inline--fa {
   width: 22px;
   height: 21px;
   color: var(--main-text-color);
+}
+.home .main-container .restaurant .card-list .card__content .card-icon .filled-heart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 21px;
+  z-index: 1;
+  opacity: 0;
+}
+.home .main-container .restaurant .card-list .card__content .card-icon .filled-heart .svg-inline--fa {
+  width: 100%;
+  height: 100%;
+}
+.home .main-container .restaurant .card-list .card__content .card-icon .filled-heart:hover {
+  animation: fadeIn 0.2s ease-in-out forwards;
+}
+.home .main-container .restaurant .card-list .card__content .card-icon .filled-heart:not(:hover) {
+  opacity: 0;
+  animation: fadeOut 0.2s;
 }
 @media (min-width: 1024px) {
   .home .main-container .restaurant {
