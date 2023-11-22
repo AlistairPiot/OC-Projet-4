@@ -57,27 +57,9 @@ body {
 }
 @keyframes fadeIn {
   0% {
-    color: linear-gradient(0deg, rgba(147, 86, 220, 0.75) 0%, rgba(255, 121, 218, 0.75) 100%);
     opacity: 0;
   }
-  20% {
-    color: linear-gradient(0deg, rgba(147, 86, 220, 0.75) 0%, rgba(255, 121, 218, 0.75) 100%);
-    opacity: 0.2;
-  }
-  40% {
-    color: linear-gradient(0deg, rgba(147, 86, 220, 0.75) 0%, rgba(255, 121, 218, 0.75) 100%);
-    opacity: 0.4;
-  }
-  60% {
-    color: linear-gradient(0deg, rgba(147, 86, 220, 0.75) 0%, rgba(255, 121, 218, 0.75) 100%);
-    opacity: 0.6;
-  }
-  80% {
-    color: linear-gradient(0deg, rgba(147, 86, 220, 0.75) 0%, rgba(255, 121, 218, 0.75) 100%);
-    opacity: 0.8;
-  }
   100% {
-    color: linear-gradient(0deg, rgba(147, 86, 220, 0.75) 0%, rgba(255, 121, 218, 0.75) 100%);
     opacity: 1;
   }
 }
@@ -341,11 +323,11 @@ body {
 }
 .home .main-container .restaurant .card-list .card__content .card-icon .heart-wrapper {
   z-index: 2;
-}
-.home .main-container .restaurant .card-list .card__content .card-icon .heart-wrapper .svg-inline--fa {
   width: 22px;
   height: 21px;
-  color: var(--main-text-color);
+}
+.home .main-container .restaurant .card-list .card__content .card-icon .heart-wrapper path {
+  fill: var(--main-text-color);
 }
 .home .main-container .restaurant .card-list .card__content .card-icon .filled-heart {
   position: absolute;
@@ -355,10 +337,6 @@ body {
   height: 21px;
   z-index: 1;
   opacity: 0;
-}
-.home .main-container .restaurant .card-list .card__content .card-icon .filled-heart .svg-inline--fa {
-  width: 100%;
-  height: 100%;
 }
 .home .main-container .restaurant .card-list .card__content .card-icon .filled-heart:hover {
   animation: fadeIn 0.2s ease-in-out forwards;
