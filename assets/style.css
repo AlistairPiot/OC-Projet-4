@@ -430,13 +430,19 @@ body {
     opacity: 0;
   }
 }
+/****** Loader animation ***********/
 .main-container .container-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   z-index: 1000;
+  background: linear-gradient(0deg, rgba(147, 86, 220, 0.95) 0%, rgba(255, 121, 218, 0.95) 100%);
+  animation: loader-animation 5s forwards;
 }
 .main-container .container-loader .load {
   width: 30vh;
@@ -446,7 +452,7 @@ body {
   animation: loader-animation 5s forwards;
 }
 .main-container .container-loader .load__bar {
-  background-color: #15dea5;
+  background-color: #99e2d0;
   height: 100%;
   width: 3vh;
   animation: bars 1000ms backwards infinite ease-in-out alternate;

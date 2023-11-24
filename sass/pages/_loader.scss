@@ -1,10 +1,10 @@
-$cd-bars: #15dea5;
+/****** Loader animation ***********/
+$cd-bars: #99e2d0;
 $size: 3vh;
 $anim-dur: 1000ms;
 $anim-delay: $anim-dur / 5;
 $loader-duration: 5s;
 
-/****** Loader animation ***********/
 @keyframes bars {
     0% {
         transform: scaleY(0.5);
@@ -20,15 +20,25 @@ $loader-duration: 5s;
         opacity: 0;
     }
 }
+/****** Loader animation ***********/
 
 .main-container {
     .container-loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
         z-index: 1000;
+        background: linear-gradient(
+            0deg,
+            rgba(147, 86, 220, 0.95) 0%,
+            rgba(255, 121, 218, 0.95) 100%
+        );
+        animation: loader-animation $loader-duration forwards;
         .load {
             width: $size * 10;
             height: $size * 7.5;
