@@ -68,8 +68,7 @@
             .button {
                 @include btn();
                 &:hover {
-                    animation: colorChange 0.2s ease-in-out;
-                    animation-fill-mode: forwards;
+                    animation: colorChange 0.2s ease-in-out forwards;
                 }
                 &:not(:hover) {
                     animation: revertColorChange 0.2s ease-in-out;
@@ -236,12 +235,8 @@
                             width: 22px;
                             height: 21px;
                             z-index: 1;
-                            // fill: linear-gradient(
-                            //     0deg,
-                            //     rgba(147, 86, 220, 0.75) 0%,
-                            //     rgba(255, 121, 218, 0.75) 100%
-                            // );
-                            opacity: 0;
+                            fill: url(#monLinearGradient);
+                            opacity: 1;
                             &:hover {
                                 animation: fadeIn 0.2s ease-in-out forwards;
                             }

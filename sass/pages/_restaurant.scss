@@ -1,4 +1,4 @@
-.menu-1 .main-container {
+.menu .main-container {
     font-family: roboto;
     .header {
         &__principal {
@@ -125,8 +125,7 @@
             .btn {
                 @include btn();
                 &:hover {
-                    animation: colorChange 0.2s ease-in-out;
-                    animation-fill-mode: forwards;
+                    animation: colorChange 0.2s ease-in-out forwards;
                 }
                 &:not(:hover) {
                     animation: revertColorChange 0.2s ease-in-out;
