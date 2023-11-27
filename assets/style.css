@@ -632,6 +632,9 @@ body {
 .menu .main-container .restaurant__menu .card__check .svg-inline--fa {
   height: 25px;
 }
+.menu .main-container .restaurant__menu .card:hover .card__visible {
+  background-color: rgb(189, 182, 182);
+}
 .menu .main-container .restaurant__menu .card:hover .card__visible .price {
   animation: slide-left 0.3s ease-out forwards;
   animation-timing-function: cubic-bezier(0.16, 0.63, 0.37, 0.83);
