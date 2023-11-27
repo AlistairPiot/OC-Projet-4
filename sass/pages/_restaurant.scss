@@ -142,7 +142,6 @@
                 }
                 &:hover {
                     .card__visible {
-                        background-color: rgb(189, 182, 182);
                         .price {
                             animation: slide-left 0.3s ease-out forwards;
                             animation-timing-function: cubic-bezier(

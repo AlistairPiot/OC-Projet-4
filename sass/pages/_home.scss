@@ -236,13 +236,24 @@
                             height: 21px;
                             z-index: 1;
                             fill: url(#monLinearGradient);
-                            opacity: 1;
-                            &:hover {
+                            opacity: 0;
+                        }
+                        &:hover {
+                            .heart-wrapper {
+                                animation: fadeOut 0.2s forwards;
+                            }
+                            .filled-heart {
                                 animation: fadeIn 0.2s ease-in-out forwards;
                             }
-                            &:not(:hover) {
-                                opacity: 0;
-                                animation: fadeOut 0.2s;
+                        }
+                        &:not(:hover) {
+                            opacity: 0;
+                            animation: fadeIn 0.2s ease-in-out forwards;
+                            .filled-heart {
+                                &:not(:hover) {
+                                    opacity: 0;
+                                    animation: fadeOut 0.2s;
+                                }
                             }
                         }
                     }
