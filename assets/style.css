@@ -367,11 +367,11 @@ body {
 }
 .home .main-container .restaurant .card-list .card__content .card-icon:not(:hover) {
   opacity: 0;
-  animation: fadeIn 0.2s ease-in-out forwards;
+  animation: fadeIn 0.3s ease forwards;
 }
 .home .main-container .restaurant .card-list .card__content .card-icon:not(:hover) .filled-heart:not(:hover) {
   opacity: 0;
-  animation: fadeOut 0.2s;
+  animation: fadeOut 0.3s;
 }
 @media (min-width: 1024px) {
   .home .main-container .restaurant {
@@ -564,8 +564,40 @@ body {
   font-weight: 400;
   font-style: italic;
 }
-.menu .main-container .restaurant__header .card-icon .svg-inline--fa {
-  margin-right: 15px;
+.menu .main-container .restaurant__header .card-icon {
+  position: relative;
+}
+.menu .main-container .restaurant__header .card-icon .heart-wrapper {
+  z-index: 2;
+  width: 22px;
+  height: 21px;
+}
+.menu .main-container .restaurant__header .card-icon .heart-wrapper path {
+  fill: var(--main-text-color);
+}
+.menu .main-container .restaurant__header .card-icon .filled-heart {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 22px;
+  height: 21px;
+  z-index: 1;
+  fill: url(#monLinearGradient);
+  opacity: 0;
+}
+.menu .main-container .restaurant__header .card-icon:hover .heart-wrapper {
+  animation: fadeOut 0.2s forwards;
+}
+.menu .main-container .restaurant__header .card-icon:hover .filled-heart {
+  animation: fadeIn 0.2s ease-in-out forwards;
+}
+.menu .main-container .restaurant__header .card-icon:not(:hover) {
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+.menu .main-container .restaurant__header .card-icon:not(:hover) .filled-heart:not(:hover) {
+  opacity: 0;
+  animation: fadeOut 0.3s;
 }
 .menu .main-container .restaurant__menu {
   margin: 0px;

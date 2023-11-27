@@ -64,8 +64,42 @@
                 font-style: italic;
             }
             .card-icon {
-                .svg-inline--fa {
-                    margin-right: 15px;
+                position: relative;
+                .heart-wrapper {
+                    z-index: 2;
+                    width: 22px;
+                    height: 21px;
+                    path {
+                        fill: var(--main-text-color);
+                    }
+                }
+                .filled-heart {
+                    position: absolute;
+                    top: 5px;
+                    left: 0;
+                    width: 22px;
+                    height: 21px;
+                    z-index: 1;
+                    fill: url(#monLinearGradient);
+                    opacity: 0;
+                }
+                &:hover {
+                    .heart-wrapper {
+                        animation: fadeOut 0.2s forwards;
+                    }
+                    .filled-heart {
+                        animation: fadeIn 0.2s ease-in-out forwards;
+                    }
+                }
+                &:not(:hover) {
+                    opacity: 0;
+                    animation: fadeIn 0.3s ease forwards;
+                    .filled-heart {
+                        &:not(:hover) {
+                            opacity: 0;
+                            animation: fadeOut 0.3s;
+                        }
+                    }
                 }
             }
         }
