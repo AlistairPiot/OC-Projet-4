@@ -632,6 +632,9 @@ body {
   flex-direction: column;
   font-size: 15px;
   width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu .main-container .restaurant__menu .card .info .title {
   margin-top: 0px;
@@ -639,11 +642,17 @@ body {
   font-size: 18px;
   font-weight: 500;
   text-transform: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu .main-container .restaurant__menu .card .info .description {
   margin-top: 0px;
   margin-bottom: 0px;
   font-weight: 300;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu .main-container .restaurant__menu .card .price {
   font-weight: 700;
@@ -663,6 +672,9 @@ body {
 }
 .menu .main-container .restaurant__menu .card__check .svg-inline--fa {
   height: 25px;
+}
+.menu .main-container .restaurant__menu .card:hover .info {
+  margin-right: 35%;
 }
 .menu .main-container .restaurant__menu .card:hover .price {
   animation: slide-left 0.3s ease-out forwards;
