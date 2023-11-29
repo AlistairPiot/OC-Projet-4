@@ -138,3 +138,15 @@
         transform: translateX(0px);
     }
 }
+
+@keyframes menuAppearance {
+    0% {
+        transform: scale(0);
+    }
+    80% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

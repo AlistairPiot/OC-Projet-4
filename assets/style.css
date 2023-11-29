@@ -103,6 +103,17 @@ body {
     transform: translateX(0px);
   }
 }
+@keyframes menuAppearance {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .home .main-container {
   margin: 0;
   padding: 0;
@@ -626,6 +637,7 @@ body {
   background-color: var(--main-bg-color);
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   color: #000000;
+  animation: menuAppearance 0.8s;
 }
 .menu .main-container .restaurant__menu .card .info {
   display: flex;
@@ -696,6 +708,36 @@ body {
   .menu .main-container .restaurant__menu .card {
     height: auto;
   }
+}
+.menu .main-container .restaurant__menu .item-0 {
+  animation-delay: 0s;
+}
+.menu .main-container .restaurant__menu .item-1 {
+  animation-delay: 0.1111111111s;
+}
+.menu .main-container .restaurant__menu .item-2 {
+  animation-delay: 0.2222222222s;
+}
+.menu .main-container .restaurant__menu .item-3 {
+  animation-delay: 0.3333333333s;
+}
+.menu .main-container .restaurant__menu .item-4 {
+  animation-delay: 0.4444444444s;
+}
+.menu .main-container .restaurant__menu .item-5 {
+  animation-delay: 0.5555555556s;
+}
+.menu .main-container .restaurant__menu .item-6 {
+  animation-delay: 0.6666666667s;
+}
+.menu .main-container .restaurant__menu .item-7 {
+  animation-delay: 0.7777777778s;
+}
+.menu .main-container .restaurant__menu .item-8 {
+  animation-delay: 0.8888888889s;
+}
+.menu .main-container .restaurant__menu .item-9 {
+  animation-delay: 1s;
 }
 .menu .main-container .restaurant__button {
   padding: 25px 0 25px 0;
