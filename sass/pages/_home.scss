@@ -64,7 +64,7 @@
             margin-bottom: 30px;
             margin-top: 0px;
         }
-        &__a-button {
+        &__btn {
             .button {
                 @include btn();
                 &:hover {

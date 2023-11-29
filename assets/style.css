@@ -187,7 +187,7 @@ body {
   margin-bottom: 30px;
   margin-top: 0px;
 }
-.home .main-container .explorer__a-button .button {
+.home .main-container .explorer__btn .button {
   cursor: pointer;
   background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   border-radius: 25px;
@@ -196,10 +196,10 @@ body {
   font-size: 16px;
   padding: 13px 18px;
 }
-.home .main-container .explorer__a-button .button:hover {
+.home .main-container .explorer__btn .button:hover {
   animation: colorChange 0.2s ease-in-out forwards;
 }
-.home .main-container .explorer__a-button .button:not(:hover) {
+.home .main-container .explorer__btn .button:not(:hover) {
   animation: revertColorChange 0.2s ease-in-out;
 }
 @media (min-width: 1024px) {
