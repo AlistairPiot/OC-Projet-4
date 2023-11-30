@@ -451,63 +451,7 @@ body {
 }
 
 /****** Loader animation ***********/
-@keyframes bars {
-  0% {
-    transform: scaleY(0.5);
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
-@keyframes loader-animation {
-  to {
-    visibility: hidden;
-    opacity: 0;
-  }
-}
 /****** Loader animation ***********/
-.main-container .container-loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1000;
-  background: linear-gradient(0deg, rgba(147, 86, 220, 0.95) 0%, rgba(255, 121, 218, 0.95) 100%);
-  animation: loader-animation 3s forwards;
-}
-.main-container .container-loader .load {
-  width: 1400px;
-  height: 1050px;
-  display: flex;
-  justify-content: space-evenly;
-  animation: loader-animation 3s forwards;
-}
-.main-container .container-loader .load__bar {
-  background-color: #99e2d0;
-  height: 100%;
-  width: 140px;
-  animation: bars 1000ms backwards infinite ease-in-out alternate;
-}
-.main-container .container-loader .load__bar--1 {
-  animation-delay: 200ms;
-}
-.main-container .container-loader .load__bar--2 {
-  animation-delay: 400ms;
-}
-.main-container .container-loader .load__bar--3 {
-  animation-delay: 600ms;
-}
-.main-container .container-loader .load__bar--4 {
-  animation-delay: 800ms;
-}
-.main-container .container-loader .load__bar--5 {
-  animation-delay: 1000ms;
-}
-
 @keyframes rotate1 {
   100% {
     transform: rotate(360deg);
@@ -527,7 +471,7 @@ body {
   0% {
     opacity: 1;
   }
-  80% {
+  70% {
     opacity: 0.9;
   }
   100% {
@@ -535,6 +479,7 @@ body {
     opacity: 0;
   }
 }
+/****** Loader animation ***********/
 .loaderX {
   display: flex;
   justify-content: center;
@@ -544,7 +489,7 @@ body {
   height: 100vh;
   z-index: 1000;
   backdrop-filter: blur(3px);
-  animation: loader-animation 3s forwards;
+  animation: loader-animation 2s 0.5s forwards;
 }
 .loaderX .container-loader2 {
   position: relative;
@@ -553,7 +498,7 @@ body {
   align-items: center;
   width: 400px;
   height: 400px;
-  animation: loader-animation 3s forwards;
+  animation: loader-animation 2s forwards;
 }
 .loaderX .container-loader2 .loader__inner {
   position: absolute;
@@ -562,7 +507,7 @@ body {
   display: block;
   width: 140px;
   height: 140px;
-  border-radius: 50%;
+  border-radius: 40%;
 }
 .loaderX .container-loader2 .loader__inner:nth-child(1) {
   top: 75px;

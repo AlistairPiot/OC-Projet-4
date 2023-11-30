@@ -1,67 +1,9 @@
 /****** Loader animation ***********/
-$cd-bars: #99e2d0;
-$size: 3vh;
-$anim-dur: 1000ms;
-$anim-delay: $anim-dur / 5;
-$loader-duration: 3s;
+$loader-duration: 2s;
 $size: 140px;
 $speed: 3s;
 
-@keyframes bars {
-    0% {
-        transform: scaleY(0.5);
-    }
-    100% {
-        transform: scaleY(1);
-    }
-}
-
-@keyframes loader-animation {
-    to {
-        visibility: hidden;
-        opacity: 0;
-    }
-}
 /****** Loader animation ***********/
-
-.main-container {
-    .container-loader {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: 1000;
-        background: linear-gradient(
-            0deg,
-            rgba(147, 86, 220, 0.95) 0%,
-            rgba(255, 121, 218, 0.95) 100%
-        );
-        animation: loader-animation $loader-duration forwards;
-        .load {
-            width: $size * 10;
-            height: $size * 7.5;
-            display: flex;
-            justify-content: space-evenly;
-            animation: loader-animation $loader-duration forwards;
-            &__bar {
-                background-color: $cd-bars;
-                height: 100%;
-                width: $size;
-                animation: bars $anim-dur backwards infinite ease-in-out
-                    alternate;
-                @for $i from 1 through 5 {
-                    &--#{$i} {
-                        animation-delay: $anim-delay * $i;
-                    }
-                }
-            }
-        }
-    }
-}
 
 @keyframes rotate1 {
     100% {
@@ -84,7 +26,7 @@ $speed: 3s;
     0% {
         opacity: 1;
     }
-    80% {
+    70% {
         opacity: 0.9;
     }
     100% {
@@ -92,7 +34,7 @@ $speed: 3s;
         opacity: 0;
     }
 }
-
+/****** Loader animation ***********/
 .loaderX {
     display: flex;
     justify-content: center;
@@ -102,7 +44,7 @@ $speed: 3s;
     height: 100vh;
     z-index: 1000;
     backdrop-filter: blur(3px);
-    animation: loader-animation $loader-duration forwards;
+    animation: loader-animation $loader-duration 0.5s forwards;
     .container-loader2 {
         position: relative;
         display: flex;
@@ -118,7 +60,7 @@ $speed: 3s;
             display: block;
             width: $size;
             height: $size;
-            border-radius: 50%;
+            border-radius: 40%;
             &:nth-child(1) {
                 top: 75px;
                 box-shadow: 8px 0 0 10px #9356dc;
