@@ -477,14 +477,14 @@ body {
   height: 100vh;
   z-index: 1000;
   background: linear-gradient(0deg, rgba(147, 86, 220, 0.95) 0%, rgba(255, 121, 218, 0.95) 100%);
-  animation: loader-animation 5s forwards;
+  animation: loader-animation 3s forwards;
 }
 .main-container .container-loader .load {
   width: 30vh;
   height: 22.5vh;
   display: flex;
   justify-content: space-evenly;
-  animation: loader-animation 5s forwards;
+  animation: loader-animation 3s forwards;
 }
 .main-container .container-loader .load__bar {
   background-color: #99e2d0;
