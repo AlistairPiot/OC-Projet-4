@@ -4,6 +4,8 @@ $size: 3vh;
 $anim-dur: 1000ms;
 $anim-delay: $anim-dur / 5;
 $loader-duration: 3s;
+$size: 140px;
+$speed: 3s;
 
 @keyframes bars {
     0% {
@@ -56,6 +58,83 @@ $loader-duration: 3s;
                         animation-delay: $anim-delay * $i;
                     }
                 }
+            }
+        }
+    }
+}
+
+@keyframes rotate1 {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate2 {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate3 {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes loader-animation {
+    0% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0.9;
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.loaderX {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    backdrop-filter: blur(3px);
+    animation: loader-animation $loader-duration forwards;
+    .container-loader2 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+        height: 400px;
+        animation: loader-animation $loader-duration forwards;
+        .loader__inner {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            display: block;
+            width: $size;
+            height: $size;
+            border-radius: 50%;
+            &:nth-child(1) {
+                top: 75px;
+                box-shadow: 8px 0 0 10px #9356dc;
+                animation: rotate1 $speed linear infinite;
+            }
+            &:nth-child(2) {
+                left: 75px;
+                bottom: 75px;
+                box-shadow: 8px 0 0 10px #99e2d0;
+                animation: rotate2 $speed linear infinite;
+            }
+            &:nth-child(3) {
+                right: 75px;
+                bottom: 75px;
+                box-shadow: 8px 0 0 10px #ff79da;
+                animation: rotate3 $speed linear infinite;
             }
         }
     }
