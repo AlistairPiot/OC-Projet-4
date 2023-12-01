@@ -52,7 +52,7 @@ $speed: 3s;
         width: 400px;
         height: 400px;
         animation: loader-animation $loader-duration forwards;
-        .loader__inner {
+        .loader__circle {
             position: absolute;
             width: 500px;
             height: 500px;
@@ -76,6 +76,22 @@ $speed: 3s;
                 bottom: 75px;
                 box-shadow: 8px 0 0 10px #ff79da;
                 animation: rotate3 $speed linear infinite;
+            }
+            /* Galaxy Fold (less/equal than 280px) */
+            @media (max-width: 280px) {
+                width: 125px;
+                height: 125px;
+                &:nth-child(1) {
+                    top: 115px;
+                }
+                &:nth-child(2) {
+                    left: 30px;
+                    bottom: 65px;
+                }
+                &:nth-child(3) {
+                    right: 30px;
+                    bottom: 65px;
+                }
             }
         }
     }

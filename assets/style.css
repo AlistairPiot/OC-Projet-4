@@ -499,7 +499,7 @@ body {
   height: 400px;
   animation: loader-animation 2s forwards;
 }
-.loaderX .container-loader2 .loader__inner {
+.loaderX .container-loader2 .loader__circle {
   position: absolute;
   width: 500px;
   height: 500px;
@@ -507,23 +507,41 @@ body {
   width: 140px;
   height: 140px;
   border-radius: 40%;
+  /* Galaxy Fold (less/equal than 280px) */
 }
-.loaderX .container-loader2 .loader__inner:nth-child(1) {
+.loaderX .container-loader2 .loader__circle:nth-child(1) {
   top: 75px;
   box-shadow: 8px 0 0 10px #9356dc;
   animation: rotate1 3s linear infinite;
 }
-.loaderX .container-loader2 .loader__inner:nth-child(2) {
+.loaderX .container-loader2 .loader__circle:nth-child(2) {
   left: 75px;
   bottom: 75px;
   box-shadow: 8px 0 0 10px #99e2d0;
   animation: rotate2 3s linear infinite;
 }
-.loaderX .container-loader2 .loader__inner:nth-child(3) {
+.loaderX .container-loader2 .loader__circle:nth-child(3) {
   right: 75px;
   bottom: 75px;
   box-shadow: 8px 0 0 10px #ff79da;
   animation: rotate3 3s linear infinite;
+}
+@media (max-width: 280px) {
+  .loaderX .container-loader2 .loader__circle {
+    width: 125px;
+    height: 125px;
+  }
+  .loaderX .container-loader2 .loader__circle:nth-child(1) {
+    top: 115px;
+  }
+  .loaderX .container-loader2 .loader__circle:nth-child(2) {
+    left: 30px;
+    bottom: 65px;
+  }
+  .loaderX .container-loader2 .loader__circle:nth-child(3) {
+    right: 30px;
+    bottom: 65px;
+  }
 }
 
 .menu .main-container {
