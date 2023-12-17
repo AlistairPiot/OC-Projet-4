@@ -1,15 +1,16 @@
 {
-  "name": "oh-my-food-p4",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "normalize.css": "^8.0.1",
-    "sass": "^1.69.4"
-  }
+    "name": "oh-my-food-p4",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "style:watch": "sass --watch sass/style.scss:assets/style.css",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "normalize.css": "^8.0.1",
+        "sass": "^1.69.4"
+    }
 }
